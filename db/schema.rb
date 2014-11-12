@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141112120954) do
+ActiveRecord::Schema.define(version: 20141112130809) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20141112120954) do
     t.datetime "updated_at"
     t.string   "url"
     t.integer  "votes_count", default: 0
+    t.boolean  "is_featured"
   end
 
   add_index "stories", ["votes_count"], name: "index_stories_on_votes_count"

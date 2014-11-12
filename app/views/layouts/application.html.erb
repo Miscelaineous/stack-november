@@ -10,9 +10,9 @@
 <body>
 	<header>
 		<nav>
-			<%= link_to "Top", root_path %>
+			<%= link_to "Top", root_path(sort: "top") %>
 			<%= link_to "Recent", root_path %>
-			<%= link_to "Featured", root_path %>
+			<%= link_to "Featured", root_path(is_featured: true) %>
 			<%= link_to "Add a Story", new_story_path %> <!-- link_to helper to anchor tag, new_story_path, evaluates to /story/new -->
 		</nav>
 		<% flash.each do |key, value| %>

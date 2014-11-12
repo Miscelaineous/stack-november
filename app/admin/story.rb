@@ -14,5 +14,5 @@ ActiveAdmin.register Story do
   #   permitted
   # end
 
-
+  permit_params :title, :body, :url, :author, :votes_count, :is_featured
 end
