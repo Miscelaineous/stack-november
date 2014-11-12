@@ -1,0 +1,17 @@
+1.  Make a request http:localhost:3000/stories
+2.  config/routes.rb -> for every get request made to /stories, route through to the stories controller's index pubic action (method)
+3.  look at stories#index method
+4.  finds 2 variables: @title and @body
+5.  give them to the view at app/views/stories/index/html.erb
+6.  read the code in that template and turn the Ruby into Ruby and execute it
+7.  wrap it all up with the view at app/views/layouts.html.erb
+8.  send result to the browser
+
+
+1.  set up rails new project_name
+2.  define routes (x7)
+3.  create methods in controllers mapped to (x7) routes - controller speaks to view and speaks to model
+4.  to manipulate data, need to access it, so set up class in the model, then manipulate via Active Record (ruby) commands
+
+database
+

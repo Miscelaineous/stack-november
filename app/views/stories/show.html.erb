@@ -1,0 +1,15 @@
+<h1><%= link_to @story.title, @story.url %></h1>
+<p><%= simple_format @story.body%></p>
+<small>By <%= @story.author %></small>
+<small>About <%= time_ago_in_words @story.created_at %> ago. </small>
+
+<p><%= @votes.count %> votes</p>
+
+<%= link_to "Edit", edit_story_path(@story) %>
+<%= link_to "Add a comment", new_story_comment_path(@story) %>
+
+<% @story.comments.each do |comment| %>
+
+<p><%= simple_format comment.body %></p>
+
+<% end %>

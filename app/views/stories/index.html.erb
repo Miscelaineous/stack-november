@@ -1,0 +1,34 @@
+<% @stories.each do |story| %>  <!-- how does it know to read variable @stories contained in the stories controller?!? -->
+
+	<section class="story">
+
+		<h1><%= link_to story.title, story.url %></h1>
+
+		<p><%= simple_format story.body %></p>
+			<ul>
+				<li><%= pluralize story.votes.count, 'vote' %></li>
+<!-- 				<li><%= story.votes.count %> votes</li> -->
+
+				<li>
+				<%= link_to "Upvote", story_votes_path(story), method: :post %>
+				<%= link_to "0 comments", story_path(story)%></li>
+
+				<%# add in code for how many votes later %>
+				<li>By <%= story.author %></li>
+				<li>About <%= time_ago_in_words story.created_at %> ago.</li>
+			</ul>
+
+		<!-- or <%link_to story.title, story.url %> where passing title and url parameters to the object story, and applying the helper method/function link_to -->
+<!-- 
+		<h1><%= story.inspect%></h1>  --> <!-- evaluates and runs output from code and prints onto page a included = -->
+<!-- 		<p><%= story.title %></p> -->
+<!-- 		<p><%= story.body %></p> -->
+
+<!-- method applies itself to an object, whereas a more generic method, not attached to an object, is a function -->
+
+	</section>
+
+<% end %>
+
+
+
